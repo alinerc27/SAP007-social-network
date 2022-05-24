@@ -1,5 +1,3 @@
-import "../../lib/config-firebase.js";
-
 export default () => { 
     const containerHome = document.createElement('div');
 
