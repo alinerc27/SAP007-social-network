@@ -3,7 +3,7 @@ import home from "./pages/home/home.js";
 import login from "./pages/login/login.js"
 import register from "./pages/register/register.js"
 import feed from "./pages/feed/feed.js"
-import { userLogout } from "../../lib/auth-firebase.js";
+import { userLogout } from "./lib/auth-firebase.js";
 
 const main = document.querySelector("#root");
 const logout = document.querySelector("#btnLogout");
