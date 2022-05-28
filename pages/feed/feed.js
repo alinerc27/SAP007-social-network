@@ -6,7 +6,7 @@ import { auth } from "../../lib/auth-firebase.js";
 export default () => {
   let containerFeed = document.createElement('div');
   let templateFeed = `
-     
+    <section class="feedcontainer">
     <div class="postt">
     <p class="post">Publique sua teoria &#x1F441</p>
     </div>
@@ -14,11 +14,11 @@ export default () => {
 
     <input id="postText" type="text" placeholder="Sua teoria aqui" maxlength="280" /><br>
     <span id="error-message" class="error-writepost"></span>
-    <br><button id="btnPost" type="submit" >Postar</button><br>
+    <br><button id="btnPost" type="submit">Postar</button><br>
     <div class="sectionFeedContainer">
     <section id="sectionNewPost" class="sectionPostClass"></section>
     <section id="sectionPost" class="sectionPostClass"></section>
-    </div>
+    </div></section>
     `;
 
   containerFeed.innerHTML = templateFeed;
