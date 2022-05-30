@@ -1,15 +1,13 @@
-/*@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Satisfy&display=swap');
-*/ 
 .feedcontainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: space-around;
+  gap: 10px;
   background-color: beige;
   margin-left: 20%;
   margin-right: 20%;
 }
-
 .headerFeed {
   display: flex;
   justify-content: flex-end;
@@ -19,7 +17,6 @@
   display: flex;
   flex-direction: row;
 }
-
 .iconBtn {
   font-size: 1.5em;
   background-color: Transparent;
@@ -83,30 +80,4 @@
   cursor: pointer;
   background-color: Transparent;
   border: none;
-}
-
-.modal, writing-modal {
-  text-align: center;
-  background-color: #C3DB7B;
-  border: none;
-}
-
-.inputArea{
-  border-style:groove;
-  border-color:#306B35;
-}
-#postText{
-  border-radius:6px 6px 6px 6px ;
-}
-.tituloArea{
-  border-radius:3px 3px 3px 3px ;
-}
-.btnStyle {
-  background-color: #306B35;
-  border: none;
-  color:beige;
-}
-
-.writing-modal{
-  width: 80%;
 }
