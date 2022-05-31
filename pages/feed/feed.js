@@ -7,20 +7,21 @@ export default () => {
   const containerFeed = document.createElement('div');
   const templateFeed = `
     <section class='feedcontainer'>
-    <section class='headerFeed'>
-    <button id='btnLogout' type='submit'>Sair</button><br>
+      <section class='headerFeed'>
+        <button id='btnLogout' type='submit'>Sair</button><br>
+      </section>
+      <div class='postt'>
+        <p class='tituloFeed'>Publique sua teoria &#x1F441</p>
+      </div>
+      <input id='titulo' class='inputArea tituloArea' type='text' placeholder='Título' maxlength='90'/><br>
+      <input id='postText' class='inputArea' type='text' placeholder='Sua teoria aqui' maxlength='280' /><br>
+      <span id='error-message' class='error-writepost'></span>
+      <br><button id='btnPost' class='btnStyle tituloArea' type='submit'>Postar</button><br>
+      <div class='sectionFeedContainer'>
+        <section id='sectionNewPost' class='sectionPostClass'></section>
+        <section id='sectionPost' class='sectionPostClass'></section>
+      </div>
     </section>
-    <div class='postt'>
-    <p class='tituloFeed'>Publique sua teoria &#x1F441</p>
-    </div>
-    <input id='titulo' class='inputArea tituloArea' type='text' placeholder='Título' maxlength='90'/><br>
-    <input id='postText' class='inputArea' type='text' placeholder='Sua teoria aqui' maxlength='280' /><br>
-    <span id='error-message' class='error-writepost'></span>
-    <br><button id='btnPost' class='btnStyle tituloArea' type='submit'>Postar</button><br>
-    <div class='sectionFeedContainer'>
-    <section id='sectionNewPost' class='sectionPostClass'></section>
-    <section id='sectionPost' class='sectionPostClass'></section>
-    </div></section>
     `;
 
   containerFeed.innerHTML = templateFeed;
@@ -44,10 +45,11 @@ export default () => {
         const date = new Date().toLocaleString('pt-br');
         const item = {
           userEmail: auth.currentUser.email,
-          'titulo': titulo,
-          'post': post,
+          titulo,
+          post,
           date,
           likes: [],
+          id
         };
         sectionNewPost.appendChild(criarCard(item));
         titulo = '';
@@ -58,8 +60,8 @@ export default () => {
 
   const getPosts = async () => {
     const arrayPosts = await getPost();
-    arrayPosts.map(posts => {
-      const elemento = criarCard(posts);
+    arrayPosts.map(post => {
+      const elemento = criarCard(post);
       sectionAllPost.appendChild(elemento);
     });
   };
