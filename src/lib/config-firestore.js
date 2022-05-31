@@ -18,8 +18,8 @@ const db = getFirestore();
 export async function addPosts(inputTitulo, inputPost, userEmail) {
   try {
     const ref = await addDoc(collection(db, 'posts'), {
-      'titulo':inputTitulo,
-      'post':inputPost,
+      titulo: inputTitulo,
+      post: inputPost,
       userEmail,
       date: new Date().toLocaleString('pt-br'),
       likes: [],
