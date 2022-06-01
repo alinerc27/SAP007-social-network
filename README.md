@@ -24,7 +24,7 @@ Este projeto foi idealizado e criado pelas desenvolvedoras:
 [Daiane Gonçalves Da Silva](@daianeex), e
 [Isabela Soares](@IsaSoaresFr).
 
-Terceiro projeto proposto no bootcamp da @Laboratoria
+Terceiro projeto proposto no bootcamp da [@Laboratoria](https://github.com/Laboratoria)
 
 ## 3. Planejamento
 
